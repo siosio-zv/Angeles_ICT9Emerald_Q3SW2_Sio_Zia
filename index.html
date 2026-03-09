@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Q3 Seatwork 2</title>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<style>
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image:url("fruits.jpeg");
+    background-size:cover;
+}
+.header{
+    background:greenyellow;
+    color:white;
+    text-align:center;
+    margin-bottom: 50px;
+}
+.box{
+    background:whitesmoke
+    padding:25px;
+    border-radius:20px;
+    margin-top:40px;
+}
+
+button{
+    margin-top:20px;
+    size: 30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+<br>
+<h2>Fruits Shopping</h2>
+</div>
+
+<div class="container">
+<div class="box">
+
+<p>
+    Insert your budget! 
+</p>
+
+<input type="number" id="budget"class="form-control"placeholder="Enter Budget (Pesos)">
+<button class="btn btn-success"onclick="suggestFood()">Search for Fruits!</button>
+
+<h4 id="result"></h3>
+
+</div>
+
+
+<div class="row text-center mt-4">
+
+<div class="col-md-4">
+<h3>Apple</h3></div>
+<br>
+
+<div class="col-md-4">
+<h3>Green Apple</h3></div>
+<br>
+
+<div class="col-md-4">
+<h3>Dragon Fruit</h3></div>
+<br>
+
+</div>
+
+</div>
+
+
+<br>
+<br>
+
+
+<script>
+
+
+function suggestFood(){
+
+    let budget = document.getElementById("budget").value;
+
+    let message = "";
+
+    if(budget >= 120){
+        message = "Apple (2 Pieces)";
+    }
+
+    else if(budget >= 150){
+        message = "Green Apple (2 Pieces)";
+    }
+
+    else if(budget >= 250){
+        message = "Dragon Fruit (2 Pieces)";
+    }
+    else{
+        message = "Out of Budget";
+    }
+
+    document.getElementById("result").innerHTML = message;
+ }
+
+
+</script>
+</body>
+</html>
+
+
